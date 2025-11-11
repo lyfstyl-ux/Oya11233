@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, "system-ui", sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Mode - Clean and Bright */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 199 100% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 259 100% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 70%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 199 100% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%;
+    --input: 0 0% 93%;
+    --ring: 199 100% 54%;
+    --chart-1: 199 100% 54%;
+    --chart-2: 259 100% 65%;
+    --chart-3: 280 65% 60%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Dark Mode - Sleek and Modern */
+    --background: 10 14% 8%;
+    --foreground: 210 40% 96%;
+    --card: 15 20% 15%;
+    --card-foreground: 210 40% 96%;
+    --popover: 15 20% 15%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 199 100% 54%;
+    --primary-foreground: 10 14% 8%;
+    --secondary: 259 100% 65%;
+    --secondary-foreground: 10 14% 8%;
+    --muted: 20 10% 35%;
+    --muted-foreground: 210 20% 75%;
+    --accent: 199 100% 54%;
+    --accent-foreground: 10 14% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 15% 25%;
+    --input: 20 15% 25%;
+    --ring: 199 100% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Professional premium orb styling with glassmorphism */
+.orb-container {
+  perspective: 1000px;
+}
+
+.orb {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    135deg,
+    rgba(30, 144, 255, 0.4) 0%,
+    rgba(70, 130, 180, 0.2) 50%,
+    rgba(10, 20, 40, 0.8) 100%
+  );
+  box-shadow: 0 0 60px rgba(30, 144, 255, 0.5), 0 0 100px rgba(30, 144, 255, 0.2), inset 0 0 60px
+    rgba(100, 180, 255, 0.1), inset 0 0 30px rgba(50, 150, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  animation: orbPulse 3s ease-in-out infinite;
+}
+
+.orb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 0deg, transparent, rgba(100, 180, 255, 0.3), transparent 180deg);
+  animation: orbRotate 4s linear infinite;
+}
+
+.orb.active {
+  box-shadow: 0 0 80px rgba(100, 180, 255, 0.8), 0 0 120px rgba(30, 144, 255, 0.4), inset 0 0 80px
+    rgba(100, 200, 255, 0.2), inset 0 0 40px rgba(70, 170, 255, 0.1);
+}
+
+.orb.speaking {
+  animation: orbPulse 0.4s ease-in-out infinite, orbGlow 0.8s ease-in-out infinite;
+}
+
+@keyframes orbPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes orbGlow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes orbRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Premium waveform visualization */
+.waveform-bar {
+  background: linear-gradient(to top, hsl(199, 100%, 54%), hsl(259, 100%, 65%));
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+}
+
+/* Premium button styling */
+.voice-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.voice-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,66 @@
+~/workspace$ npm install
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @react-native/virtualized-lists@0.82.1
+npm warn Found: @types/react@18.3.26
+npm warn node_modules/@types/react
+npm warn   dev @types/react@"^18" from the root project
+npm warn   76 more (@radix-ui/react-accordion, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/react@"^19.1.1" from @react-native/virtualized-lists@0.82.1
+npm warn node_modules/@react-native/virtualized-lists
+npm warn   @react-native/virtualized-lists@"0.82.1" from react-native@0.82.1
+npm warn   node_modules/react-native
+npm warn
+npm warn Conflicting peer dependency: @types/react@19.2.3
+npm warn node_modules/@types/react
+npm warn   peerOptional @types/react@"^19.1.1" from @react-native/virtualized-lists@0.82.1
+npm warn   node_modules/@react-native/virtualized-lists
+npm warn     @react-native/virtualized-lists@"0.82.1" from react-native@0.82.1
+npm warn     node_modules/react-native
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: react-native@0.82.1
+npm error Found: @types/react@18.3.26
+npm error node_modules/@types/react
+npm error   dev @types/react@"^18" from the root project
+npm error   peerOptional @types/react@"*" from @radix-ui/react-accordion@1.2.12
+npm error   node_modules/@radix-ui/react-accordion
+npm error     @radix-ui/react-accordion@"latest" from the root project
+npm error   75 more (@radix-ui/react-alert-dialog, @radix-ui/react-slot, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peerOptional @types/react@"^19.1.1" from react-native@0.82.1
+npm error node_modules/react-native
+npm error   react-native@"latest" from the root project
+npm error   peerOptional react-native@"*" from @expo/cli@54.0.16
+npm error   node_modules/@expo/cli
+npm error     @expo/cli@"54.0.16" from expo@54.0.23
+npm error     node_modules/expo
+npm error       expo@"latest" from the root project
+npm error       11 more (@expo/cli, @expo/metro-config, @expo/prebuild-config, ...)
+npm error   11 more (@expo/devtools, @expo/vector-icons, ...)
+npm error
+npm error Conflicting peer dependency: @types/react@19.2.3
+npm error node_modules/@types/react
+npm error   peerOptional @types/react@"^19.1.1" from react-native@0.82.1
+npm error   node_modules/react-native
+npm error     react-native@"latest" from the root project
+npm error     peerOptional react-native@"*" from @expo/cli@54.0.16
+npm error     node_modules/@expo/cli
+npm error       @expo/cli@"54.0.16" from expo@54.0.23
+npm error       node_modules/expo
+npm error         expo@"latest" from the root project
+npm error         11 more (@expo/cli, @expo/metro-config, @expo/prebuild-config, ...)
+npm error     11 more (@expo/devtools, @expo/vector-icons, ...)
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /home/runner/.npm/_logs/2025-11-11T17_01_05_772Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-11-11T17_01_05_772Z-debug-0.log
+~/workspace$ 
